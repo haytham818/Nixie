@@ -32,6 +32,7 @@ Makefile
 # clangd Files
 .clangd
 .cache/
+compile_commands.json
 
 # Package managers
 _deps/
