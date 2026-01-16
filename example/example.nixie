@@ -1,0 +1,9 @@
+return {
+    config = {
+        windows = {
+            title = "Nixie Example",
+            resolution = { width = 800, height = 600 },
+            fps = 60,
+        }
+    },
+}

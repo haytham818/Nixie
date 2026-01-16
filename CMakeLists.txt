@@ -76,15 +76,26 @@ if(NIXIE_FETCH_DEPENDENCIES)
     FetchContent_Declare(
         sol2
         GIT_REPOSITORY https://github.com/ThePhD/sol2.git
-        GIT_TAG v3.3.1
+        GIT_TAG v3.5.0
         GIT_SHALLOW TRUE
     )
     FetchContent_MakeAvailable(sol2)
+
+    # CLI11
+    message(STATUS "Fetching CLI11...")
+    FetchContent_Declare(
+        cli11
+        GIT_REPOSITORY https://github.com/CLIUtils/CLI11.git
+        GIT_TAG v2.4.2
+        GIT_SHALLOW TRUE
+    )
+    FetchContent_MakeAvailable(cli11)
 else()
     # Use system-installed dependencies
     find_package(raylib REQUIRED)
     find_package(Lua REQUIRED)
     find_package(sol2 REQUIRED)
+    find_package(CLI11 REQUIRED)
 endif()
 
 # ============================================================================
@@ -111,6 +122,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     raylib
     lua_static
     sol2
+    CLI11::CLI11
 )
 
 # ============================================================================
