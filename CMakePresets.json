@@ -20,6 +20,9 @@
             "displayName": "Linux Debug",
             "inherits": "base",
             "generator": "Ninja",
+            "environment": {
+                "CCACHE_TEMPDIR": "/tmp"
+            },
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug"
             },
@@ -34,6 +37,9 @@
             "displayName": "Linux Release",
             "inherits": "base",
             "generator": "Ninja",
+            "environment": {
+                "CCACHE_TEMPDIR": "/tmp"
+            },
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             },
